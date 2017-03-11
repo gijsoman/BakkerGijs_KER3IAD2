@@ -43,21 +43,21 @@ void ofApp::update(){
 		query.reset();
 	}
 
-	for (int i = 0; i < 20; i++)
-	{
-		//sine = sin(ofGetElapsedTimef() * i / pctSingle) * (pctSingle * 5);
-		//ballsSine[i] = sine;
-		//cose = cos(ofGetElapsedTimef() * i / pctMultiple) * (pctMultiple * 5);
-		//ballsCose[i] = cose;
-		sine = sin(ofGetElapsedTimef() * i / 20) * (pctSingle * 5);
-		ballsSine[i] = sine;
-		cose = cos(ofGetElapsedTimef() * i / 20) * (pctMultiple * 5);
-		ballsCose[i] = cose;
-		//sine = sin(ofGetElapsedTimef() * pctSingle * i / 100) * (pctSingle * 5);
-		//ballsSine[i] = sine;
-		//cose = cos(ofGetElapsedTimef() * pctMultiple * i / 100) * (pctMultiple * 5);
-		//ballsCose[i] = cose;
-	}
+	//for (int i = 0; i < 20; i++)
+	//{
+	//	//sine = sin(ofGetElapsedTimef() * i / pctSingle) * (pctSingle * 5);
+	//	//ballsSine[i] = sine;
+	//	//cose = cos(ofGetElapsedTimef() * i / pctMultiple) * (pctMultiple * 5);
+	//	//ballsCose[i] = cose;
+	//	//sine = sin(ofGetElapsedTimef() * i / 20) * (pctSingle * 5);
+	//	//ballsSine[i] = sine;
+	//	//cose = cos(ofGetElapsedTimef() * i / 20) * (pctMultiple * 5);
+	//	//ballsCose[i] = cose;
+	//	sine = sin(ofGetElapsedTimef() * pctSingle * i / 100) * (pctSingle * 5);
+	//	ballsSine[i] = sine;
+	//	cose = cos(ofGetElapsedTimef() * pctMultiple * i / 100) * (pctMultiple * 5);
+	//	ballsCose[i] = cose;
+	//}
 	
 }
 
