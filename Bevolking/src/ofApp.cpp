@@ -54,14 +54,62 @@ void ofApp::draw(){
 	}
 	if (marriedUnmarried)
 	{
-		ofSetColor(ofColor::red);
-		ofDrawRectangle(200, 500, 100, -(unmarried / 50));
-		ofSetColor(ofColor::green);
-		ofDrawRectangle(300, 500, 100, -(married / 50));
-		ofDrawBitmapString("unmarried", 200, 500 + 20);
-		ofDrawBitmapString(unmarried, 200, 500 - (unmarried / 50) - 10);
-		ofDrawBitmapString("married", 300, 500 + 20);
-		ofDrawBitmapString(married, 300, 500 - (married / 50) - 10);
+		if (!menWomen)
+		{
+			if (married != 0)
+			{
+				lastKnownMarried = married;
+				lastKnownUnmarried = unmarried;
+				ofSetColor(ofColor::red);
+				ofDrawRectangle(300, 500, 100, -(unmarried / 50));
+				ofSetColor(ofColor::green);
+				ofDrawRectangle(400, 500, 100, -(married / 50));
+				ofDrawBitmapString("unmarried", 300, 500 + 20);
+				ofDrawBitmapString(unmarried, 300, 500 - (unmarried / 50) - 10);
+				ofDrawBitmapString("married", 400, 500 + 20);
+				ofDrawBitmapString(married, 400, 500 - (married / 50) - 10);
+			}
+			else
+			{
+				ofSetColor(ofColor::red);
+				ofDrawRectangle(300, 500, 100, -(lastKnownUnmarried / 50));
+				ofSetColor(ofColor::green);
+				ofDrawRectangle(400, 500, 100, -(lastKnownMarried / 50));
+				ofDrawBitmapString("unmarried", 300, 500 + 20);
+				ofDrawBitmapString(lastKnownUnmarried, 300, 500 - (lastKnownUnmarried / 50) - 10);
+				ofDrawBitmapString("married", 400, 500 + 20);
+				ofDrawBitmapString(lastKnownMarried, 400, 500 - (lastKnownMarried / 50) - 10);
+			}
+		}
+		else
+		{
+			if (married != 0)
+			{
+				lastKnownMarried = married;
+				lastKnownUnmarried = unmarried;
+				ofSetColor(ofColor::red);
+				ofDrawRectangle(200, 500, 100, -(unmarried / 50));
+				ofSetColor(ofColor::green);
+				ofDrawRectangle(300, 500, 100, -(married / 50));
+				ofDrawBitmapString("unmarried", 200, 500 + 20);
+				ofDrawBitmapString(unmarried, 200, 500 - (unmarried / 50) - 10);
+				ofDrawBitmapString("married", 300, 500 + 20);
+				ofDrawBitmapString(married, 300, 500 - (married / 50) - 10);
+			}
+			else
+			{
+				ofSetColor(ofColor::red);
+				ofDrawRectangle(200, 500, 100, -(lastKnownUnmarried / 50));
+				ofSetColor(ofColor::green);
+				ofDrawRectangle(300, 500, 100, -(lastKnownMarried / 50));
+				ofDrawBitmapString("unmarried", 200, 500 + 20);
+				ofDrawBitmapString(lastKnownUnmarried, 200, 500 - (lastKnownUnmarried / 50) - 10);
+				ofDrawBitmapString("married", 300, 500 + 20);
+				ofDrawBitmapString(lastKnownMarried, 300, 500 - (lastKnownMarried / 50) - 10);
+			}
+		}
+
+		
 	}
 	
 	ofSetColor(ofColor::green);

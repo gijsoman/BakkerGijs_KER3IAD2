@@ -23,5 +23,8 @@ class ofApp : public ofBaseApp{
 		int women;
 		int married;
 		int unmarried;
+
+		int lastKnownMarried;
+		int lastKnownUnmarried;
 		
 };
